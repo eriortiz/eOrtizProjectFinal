@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Friend List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let post of dataService.posts">
+      <ion-item routerLink="/details/{{ post.id }}" routerDirection="forward"
+        ><ion-label>{{ post.title }}</ion-label></ion-item
+      >
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-button (click)="addPost()">
+    Add Friend
+  </ion-button>
+  <ion-button routerLink="/home/" routerDirection="backward">
+    Back
+  </ion-button>
+</ion-content>

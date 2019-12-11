@@ -1,0 +1,7 @@
+{
+  "name": "passingmoredata",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

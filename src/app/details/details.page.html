@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ post?.title }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/details"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img [src]="photo" />
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let item of post?.items">
+      <ion-item>
+        <ion-label>{{ item.title }}</ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+  <div class="ion-padding">
+    <ion-button (click)="takePicture()">
+      Take Picture
+    </ion-button>
+    <ion-button (click)="addItem()">
+      Add Info
+    </ion-button>
+    <ion-button routerLink="/friends/" routerDirection="backward">
+      Back
+    </ion-button>
+  </div>
+</ion-content>

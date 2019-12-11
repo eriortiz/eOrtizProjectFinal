@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Friend</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img [src]="photo" />
+  <div class="ion-padding">
+    <h1>Adding Friend!</h1>
+    <ion-button (click)="takePicture()">
+      Take Picture
+    </ion-button>
+    <ion-button routerLink="/friends/" routerDirection="backward">
+      Back
+    </ion-button>
+  </div>
+</ion-content>
